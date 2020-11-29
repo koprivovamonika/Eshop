@@ -1,0 +1,286 @@
+body{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1vw;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #009966;
+    font-family: 'Futura W04',sans-serif;
+    color: white;
+}
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: #009966;
+    font-family: 'Futura W04',sans-serif;
+}
+.posledni{
+    margin-right: 3vw;
+}
+nav a {
+    display: block;
+    padding: 0 20px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 65px;
+    text-decoration: none;
+}
+nav ul li ul li:hover { background: #00cc66; }
+nav a:hover { background-color: #00cc66; }
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 65px;
+}
+nav ul li:hover > ul { display: inherit; }
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+nav ul ul ul li {
+    position: relative;
+    top: -65px;
+    left: 170px;
+}
+li > a:after { content: ' +'; }
+.toggle, [id^=drop] {
+    display: none;
+}
+li > a:only-child:after { content: ''; }
+@media all and (max-width : 768px) {
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    nav { margin: 0; }
+    .toggle + a,
+    .menu { display: none; }
+    .toggle {
+        display: block;
+        background-color: #b90008;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
+    }
+    [id^=drop]:checked + ul { display: block; }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul .toggle,
+    nav ul ul a { padding: 0 40px; }
+    nav ul ul ul a { padding: 0 80px; }
+    nav a:hover,
+    nav ul ul ul a { background-color: #eb0008; }
+    nav ul li ul li .toggle,
+    nav ul ul a { background-color: #b90008; }
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+    }
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul { display: none; }
+    nav ul ul li {
+        display: block;
+        width: 100%;}
+    nav ul ul ul li { position: static;}
+}
+@media all and (max-width : 330px) {
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+/*REGISTRACE - PRIHLASENI*/
+input[type=text], [type=password], [type=email], [type=number]{
+    width: 45%;
+    float: left;
+    padding: 1.5vw 1.5vw;
+    margin: 0.8vw 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    box-sizing: border-box;
+    margin-left: 25%;
+    box-shadow: 0vw 0.1vw 0.2vw  #333333;
+}
+input[type=text]:hover, [type=password]:hover, [type=email]:hover, [type=number]:hover{
+    box-shadow: 0vw 0.17vw 0.3vw #333333;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #00cc99;
+    color: white;
+    padding: 1.5vw 1.5vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    margin-left: 25%;
+    display: block;
+    margin: 0.8vw auto;
+    margin-bottom: 5%;
+}
+
+input[type=submit]:hover{
+    box-shadow: 0vw 0.1vw 0.2vw #d40008;
+    background-color: #00cc99;
+}
+
+.nadpis{
+    text-align: center;
+}
+
+.nadpis_vedlejsi_stranka{
+    text-align: center;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-size: 5vw;
+    font-weight: 300;
+
+}
+
+.hlaska{
+    text-align: center;
+}
+
+/*TABULKA*/
+table {
+    margin-left: 25%;
+    margin-right: 25%;
+    width:50%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #cccccc;
+}
+th {
+    background-color: #920008;
+    color: white;
+}
+
+/*KOSIK*/
+.catalog-item {
+    width: 200px;
+    background-color: beige;
+    height: 300px;
+    margin: 5px;
+}
+
+.catalog-img {
+    font-size: 100px;
+}
+
+.cart-button, .catalog-buy-button {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid yellow;
+    background-color: yellowgreen;
+    text-align: center;
+}
+
+#catalog-items {
+    display: flex;
+}
+
+a.catalog-buy-button {
+    display: block;
+}
+
+.cart-item {
+    justify-content: space-between;
+    display: flex;
+    margin: 5px;
+    border: 1px solid yellowgreen;
+    padding: 5px;
+}
+
+.cart-quantity {
+    margin: 10px;
+}
+
+.cart-price {
+    margin: 10px;
+
+}
+
+.cart-control {
+    display: flex;
+}
+
+#cart-total-price {
+    font-weight: bold;
+}
+
+/*PC VERZE*/
+@media(min-width:1200px){
+    .text{
+        font-size: 1.5vw;
+    }
+
+    /*REGISTRACE - PRIHLASENI*/
+    .prihlaseni{
+        width: 50%;
+        display: block;
+        float: left;
+    }
+
+    .registrace{
+        width: 50%;
+        display: block;
+        float: left;
+    }
+
+    input[type=text], [type=password], [type=email], [type=number]{
+        width: 40%;
+        padding: 0.9vw 0.9vw;
+        border-radius: 0.3vw;
+        margin-left: 30%;
+    }
+
+    input[type=submit] {
+        width: 40%;
+        padding: 0.9vw 0.9vw;
+        border-radius: 0.3vw;
+        margin-left: 30%;
+    }
+    .nadpis_vedlejsi_stranka{
+        font-size: 2.7vw; 
+    }
+
+}
